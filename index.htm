@@ -1,3 +1,54 @@
-<html>
-  <img src="https://i.imgur.com/JszvJji.jpeg">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image and Text Side by Side</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            max-width: 800px;
+            width: 100%;
+        }
+        .container img {
+            width: 50%;
+            height: auto;
+        }
+        .text-content {
+            padding: 20px;
+            width: 50%;
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+            .container img, .text-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://i.imgur.com/JszvJji.jpeg" alt="Poster">
+        <div class="text-content">
+            <h1>Bingo Night!</h1>
+            <!--<p>This is a sample paragraph. The image is displayed on the left, and this text is displayed on the right. Resize the browser window to see the responsive behavior.</p>-->
+        </div>
+    </div>
+</body>
 </html>
